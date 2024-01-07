@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer&display=swap");
+
+body {
+  font-family: "Noto Sans Khmer", sans-serif;
+}
+
+.card-hover:hover {
+  background-color: #f4f4f4;
+}
+
+.product-image {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.text-price {
+  color: rgb(255, 35, 35) !important;
+}
+
+.product-thumbnail {
+  height: 140px;
+  width: 200px;
+  object-fit: cover;
+}
