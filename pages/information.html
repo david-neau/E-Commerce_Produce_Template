@@ -28,18 +28,10 @@
         <div class="row g-5">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-chevron p-3rounded-3">
-              <li class="breadcrumb-item">
-                <a
-                  class="link-body-emphasis active text-decoration-none"
-                  href=""
-                  >Information</a
-                >
-              </li>
-              <li class="breadcrumb-item">
-                <a class="text-decoration-none" href="#">Shipping</a>
-              </li>
-              <li class="breadcrumb-item" aria-current="page">
-                <a class="text-decoration-none" href="#">Payment</a>
+              <li class="breadcrumb-item">Information</li>
+              <li class="breadcrumb-item text-muted">Shipping</li>
+              <li class="breadcrumb-item text-muted" aria-current="page">
+                Payment
               </li>
             </ol>
           </nav>
@@ -110,7 +102,7 @@
 
           <div class="col-md-6 col-lg-6">
             <h4 class="mb-3">Contact</h4>
-            <div class="row g-3 mt-3">
+            <div class="row g-3 mt">
               <div class="col-12">
                 <div class="form-floating mb-3">
                   <input
@@ -268,15 +260,16 @@
                   </div>
                 </div>
                 <div class="col">
-                  <a href="#" class="text-decoration-none">< Return to cart</a>
+                  <a href="#" class="text-decoration-none">Return to cart</a>
                 </div>
                 <div class="col-6 float-end">
-                  <button
+                  <a
+                    href="../pages/shipping.html"
                     class="w-100 btn btn-primary btn-lg mt-4"
                     type="submit"
                   >
                     Continue to shipping
-                  </button>
+                  </a>
                 </div>
               </div>
             </form>
@@ -285,7 +278,7 @@
       </main>
 
       <footer class="my-5 pt-5 text-body-secondary text-center text-small">
-        <p class="mb-1">© 2017–2023 Company Name</p>
+        <p class="mb-1">© 2017-2023 Company Name</p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>
