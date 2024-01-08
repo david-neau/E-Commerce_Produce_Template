@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PRODUCT - WAREHOUSE</title>
+    <title>VENDOR - WAREHOUSE</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -262,198 +262,38 @@
       </div>
     </div>
 
-    <!-- Cart Modal -->
-    <div
-      class="modal fade"
-      id="cartModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Cart</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">Item has been added to cart!</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-outline-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <a type="button" class="btn btn-primary" href="cart.html"
-              >Continue to cart</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Product Info -->
+    <!-- All shops -->
     <section>
       <div class="container mt-5">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-            <li class="breadcrumb-item">
-              <a href="#">Category</a>
-            </li>
-            <li class="breadcrumb-item">
-              <a href="../pages/category.html">ផ្លែឈើ</a>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              ផ្លែ​ល្ហុង
-            </li>
+
+            <li class="breadcrumb-item active" aria-current="page">Shops</li>
           </ol>
         </nav>
-        <div class="row">
-          <div class="col-12 col-md-3">
-            <img
-              src="/images/product/natural_garden_cambodia_lahong.jpg"
-              class="card-img-top product-image rounded-3"
-              alt=""
-            />
-          </div>
-          <div class="col pt-4 pt-md-0">
-            <h2>ផ្លែ​ល្ហុង</h2>
-            <a
-              class="text-muted text-decoration-none"
-              href="../pages/vendor.html"
-              >Natural Garden-Cambodia</a
-            >
-            <hr />
-            <h3 class="mb-3">$1/kg</h3>
-            <div class="row">
-              <div class="col-6 col-md-3">
-                <div class="form-floating">
-                  <input type="number" class="form-control" width="" min="1" />
-                  <label for="floatingTextarea">Quantity</label>
-                </div>
-              </div>
-              <div class="col-6 col-md-3">
-                <button
-                  class="btn btn-success btn-lg"
-                  data-bs-toggle="modal"
-                  data-bs-target="#cartModal"
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-            <div class="row mt-3">
-              <div class="col h4">បន្លែ ផ្លែឈើស្រស់ៗទើបមកដល់!</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Related product -->
-    <section>
-      <div class="container mt-5">
-        <h2 class="mb-3">Related</h2>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+        <span class="h1">Shops</span>
+        <div class="row mt-3">
           <div class="col">
-            <a href="#" class="text-decoration-none">
-              <div class="card shadow-sm card-hover">
-                <img
-                  src="/images/product/rice1.jpg"
-                  class="card-img-top product-image p-3"
-                  alt=""
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    <span class="fw-bold">Golden Rice Company</span
-                    ><br />Jasmine Rice
-                  </p>
-
-                  <div class="d-flex justify-content-between align-items-end">
-                    <p></p>
-                    <small class="text-body-secondary">$199.99/kg</small>
-                  </div>
-                </div>
-              </div></a
-            >
-          </div>
-          <div class="col">
-            <a href="#" class="text-decoration-none">
-              <div class="card shadow-sm card-hover">
-                <img
-                  src="/images/product/rice3.jpg"
-                  class="card-img-top product-image p-3"
-                  alt=""
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    <span class="fw-bold">Blue Company Co.</span
-                    ><br />លក់អង្ករ​ផ្កា​រំដួល​
-                  </p>
-
-                  <div class="d-flex justify-content-between align-items-end">
-                    <p></p>
-                    <small class="text-body-secondary">$199.99/kg</small>
-                  </div>
-                </div>
-              </div></a
-            >
-          </div>
-          <div class="col">
-            <a href="#" class="text-decoration-none">
-              <div class="card shadow-sm card-hover">
-                <img
-                  src="/images/product/rice2.jpg"
-                  class="card-img-top product-image p-3"
-                  alt=""
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    <span class="fw-bold">Green Crop</span
-                    ><br />អង្ករ​ផ្កា​រំដួល​
-                  </p>
-
-                  <div class="d-flex justify-content-between align-items-end">
-                    <p></p>
-                    <small class="text-body-secondary">$199.99/kg</small>
-                  </div>
-                </div>
-              </div></a
-            >
-          </div>
-          <div class="col">
-            <a href="#" class="text-decoration-none">
-              <div class="card shadow-sm card-hover">
-                <img
-                  src="/images/product/rice4.jpg"
-                  class="card-img-top product-image p-3"
-                  alt=""
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    <span class="fw-bold">Lime Farm Produce</span
-                    ><br />អង្ករសែនក្រអូបខ្មែរពិសេស
-                  </p>
-
-                  <div class="d-flex justify-content-between align-items-end">
-                    <p></p>
-                    <small class="text-body-secondary">$2/kg</small>
-                  </div>
-                </div>
-              </div></a
-            >
-          </div>
-        </div>
-        <div class="row mt-4">
-          <div class="col text-center">
-            <button class="btn btn-outline-secondary px-5">Browse More</button>
+            <table class="table">
+              <thead>
+                <tr class="table-active">
+                  <th scope="col">A</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a
+                      href="../pages/vendor.html"
+                      class="text-black text-decoration-none"
+                      >Apple Company</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
