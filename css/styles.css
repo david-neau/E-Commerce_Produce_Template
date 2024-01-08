@@ -36,3 +36,14 @@ body {
   height: 350px;
   object-fit: cover;
 }
+
+.logo-size {
+  height: 150px;
+  width: 150px;
+}
+
+.logo-fixed {
+  height: 50px;
+  width: 150px;
+  object-fit: cover;
+}
