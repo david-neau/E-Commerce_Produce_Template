@@ -48,17 +48,49 @@
               <ul class="dropdown-menu">
                 <li>
                   <a class="dropdown-item" href="../pages/category_1.html"
-                    >Category 1</a
+                    >Fruits</a
                   >
                 </li>
                 <li>
                   <a class="dropdown-item" href="../pages/category_1.html"
-                    >Category 2</a
+                    >Vegetable</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/category_1.html"
+                    >Meat</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/category_1.html"
+                    >Seafood</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/category_1.html"
+                    >Aromatics</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/category_1.html"
+                    >Rice</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/category_1.html"
+                    >Noodle</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/category_1.html"
+                    >Bakery</a
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="../pages/category.html"
+                  <a
+                    class="dropdown-item text-secondary"
+                    href="../pages/category.html"
                     >View Categories</a
                   >
                 </li>
@@ -258,31 +290,63 @@
         </div>
       </div>
     </div>
-
+    <div
+      class="modal fade"
+      id="usernameModal"
+      tabindex="-1"
+      aria-labelledby="usernameModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Change Username
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Please contact support to change your username.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">
+              Contact Support
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- My Info -->
     <section>
       <div class="row mt-5">
         <div class="col-12 col-md-3 text-center">
-          <svg
-            class="bd-placeholder-img rounded-circle"
+          <img
+            class="d-block mx-auto mb-4 rounded-circle"
+            src="../images/user/hamster.jpg"
+            alt=""
             width="140"
             height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect
-              width="100%"
-              height="100%"
-              fill="var(--bs-secondary-color)"
-            ></rect>
-          </svg>
-          <h2 class="fw-normal mt-4">David Neau</h2>
-          <p>Date created : 2024-01-01</p>
-          <p><a class="btn btn-secondary" href="#">Purchase History</a></p>
+          />
+          <h2 class="fw-normal mt-4">John Smith</h2>
+          <p>
+            @JohnSmith <br /><span class="text-secondary"
+              >Date created : 2024-01-01</span
+            >
+          </p>
+
+          <p><a class="btn btn-primary" href="#">Contact Support</a></p>
         </div>
         <div class="col">
           <div class="bd-example m-0 border-0">
@@ -316,6 +380,18 @@
                 </button>
                 <button
                   class="nav-link"
+                  id="nav-payment-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-payment"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-contact"
+                  aria-selected="true"
+                >
+                  Payment Method
+                </button>
+                <button
+                  class="nav-link"
                   id="nav-contact-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#nav-contact"
@@ -330,11 +406,12 @@
             </nav>
             <div class="tab-content p-3" id="nav-tabContent">
               <div
-                class="tab-pane fade active"
+                class="tab-pane fade active show"
                 id="nav-home"
                 role="tabpanel"
                 aria-labelledby="nav-home-tab"
               >
+                <h3>My Information</h3>
                 <form class="needs-validation" novalidate="">
                   <div class="row g-3">
                     <div class="col-sm-6">
@@ -371,7 +448,15 @@
 
                     <div class="col-12">
                       <label for="username" class="form-label">Username</label>
-                      <br />@DavidNeau
+                      <br />@JohnSmith
+                      <button
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#usernameModal"
+                        class="btn btn-outline-secondary btn-sm"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
                     </div>
                     <div class="col-6">
                       <label for="lastName" class="form-label"
@@ -433,6 +518,7 @@
                 role="tabpanel"
                 aria-labelledby="nav-profile-tab"
               >
+                <h3>Order</h3>
                 <table class="table">
                   <thead>
                     <tr>
@@ -440,9 +526,10 @@
                       <td><small>INVOICE ID#</small></td>
 
                       <td><small>VENDOR</small></td>
+                      <td><small>PAYMENT TYPE</small></td>
                       <td><small>STATUS</small></td>
                       <td><small>TOTAL</small></td>
-                      <td><small>ACTION</small></td>
+                      <td><small>VIEW</small></td>
                     </tr>
                   </thead>
                   <tbody>
@@ -458,10 +545,14 @@
                           Golden Star Trading Company</a
                         >
                       </td>
+                      <td>ABA Pay</td>
                       <td>COMPLETED</td>
                       <td>$19.99</td>
                       <td>
-                        <a href="#" class="text-primary text-decoration-none"
+                        <a
+                          href="../pages/invoice.html"
+                          target="_blank"
+                          class="text-primary text-decoration-none"
                           >View Invoice</a
                         >
                       </td>
@@ -471,10 +562,82 @@
               </div>
               <div
                 class="tab-pane fade show"
+                id="nav-payment"
+                role="tabpanel"
+                aria-labelledby="nav-payment-tab"
+              >
+                <h3>Saved Payment</h3>
+                <div class="list-group">
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                    aria-current="true"
+                  >
+                    <img
+                      src="/images/payment/aba_pay.png"
+                      alt="twbs"
+                      width=""
+                      height="32"
+                      class="flex-shrink-0"
+                    />
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                      <div>
+                        <h6 class="mb-0">ABA Pay</h6>
+                        <p class="mb-0 opacity-75">
+                          007 555 666 777 (John Smith)
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                    aria-current="true"
+                  >
+                    <img
+                      src="/images/payment/acleda_bank_logo.jpg"
+                      alt="twbs"
+                      width="32"
+                      height="32"
+                      class="rounded-circle flex-shrink-0"
+                    />
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                      <div>
+                        <h6 class="mb-0">ACLEDA</h6>
+                        <p class="mb-0 opacity-75">
+                          007 555 666 777 (John Smith)
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                    aria-current="true"
+                  >
+                    <img
+                      src="../images/svg/credit-card-fill.svg"
+                      alt="twbs"
+                      width="32"
+                      height="32"
+                      class="flex-shrink-0"
+                    />
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                      <div>
+                        <h6 class="mb-0">Credit Card</h6>
+                        <p class="mb-0 opacity-75">XXXX-XXXX-4023</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade show"
                 id="nav-contact"
                 role="tabpanel"
                 aria-labelledby="nav-contact-tab"
               >
+                <h3>Inbox</h3>
                 <div class="list-group">
                   <a
                     href="#"

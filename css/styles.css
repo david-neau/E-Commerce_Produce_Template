@@ -24,6 +24,13 @@ body {
   object-fit: cover;
 }
 
+.cart-image {
+  height: 130px;
+  width: 130px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
 .category-image {
   aspect-ratio: 1/1;
   object-fit: contain;
