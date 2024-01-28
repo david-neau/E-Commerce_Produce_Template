@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VENDOR - WAREHOUSE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <!--Navbar
+//Vendor Dropdown **maybe put this as a profile downdown for other roles
+because it's a bit empty
+> Profile
+> Listing
+> Inbox
+
+//Employee **maybe like a table with filter and search
+> Staff
+> Manager
+> Owner
+
+//Insight 
+> View
+> Sales
+> Statistics
+
+//Support
+> FAQ
+> Discussion
+> Contact Us
+
+
+
+-->
+
+    <!--Navbar-->
+    <header class="p-3 mb-3 border-bottom">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li>
+              <a href="#" class="nav-link px-2 link-body-emphasis active"
+                >Overview</a
+              >
+            </li>
+
+            <li>
+              <a href="#" class="nav-link px-2 link-body-emphasis">Products</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link text-black dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Insight
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">View</a></li>
+                <li><a class="dropdown-item" href="#">Sales</a></li>
+
+                <li><a class="dropdown-item" href="#">Statistics</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-2 link-body-emphasis">Support</a>
+            </li>
+          </ul>
+
+          <div class="dropdown text-end">
+            <a
+              href="#"
+              class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle show"
+              data-bs-toggle="dropdown"
+              aria-expanded="true"
+            >
+              <img
+                src="/images/vendor/aeon.png"
+                alt=""
+                width="32"
+                height="32"
+                class="rounded-circle me-2"
+              />
+              <strong>AEON 3 (Mean Chey)</strong>
+            </a>
+            <ul
+              class="dropdown-menu text-small shadow show"
+              style="
+                position: absolute;
+                inset: auto auto 0px 0px;
+                margin: 0px;
+                transform: translate(0px, -34.4444px);
+              "
+              data-popper-placement="top-start"
+            >
+              <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+              <li><a class="dropdown-item" href="#">Inbox</a></li>
+              <li><a class="dropdown-item" href="#">Employee</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Overview-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-10 mx-auto">
+          <h2>
+            Chat
+            <button class="btn btn-sm btn-danger float-end">End chat</button>
+          </h2>
+          <div class="card mt-4">
+            <div class="list-group">
+              <a
+                href="#"
+                class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                aria-current="true"
+              >
+                <img
+                  src="/images/support/6425a5b698c539cbabed6a60_Top-Ideas-To-Help-Improve-Your-Customer-Service.jpg"
+                  alt="twbs"
+                  width="32"
+                  height="32"
+                  class="rounded-circle flex-shrink-0"
+                />
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <h6 class="mb-0">Agent</h6>
+                    <p class="mb-0 opacity-75">
+                      This chat may be recorded for training purposes.
+                    </p>
+                  </div>
+                  <small class="opacity-50 text-nowrap"
+                    >12/01/2024 13:00PM</small
+                  >
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                aria-current="true"
+              >
+                <img
+                  src="/images/support/6425a5b698c539cbabed6a60_Top-Ideas-To-Help-Improve-Your-Customer-Service.jpg"
+                  alt="twbs"
+                  width="32"
+                  height="32"
+                  class="rounded-circle flex-shrink-0"
+                />
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <h6 class="mb-0">Agent</h6>
+                    <p class="mb-0 opacity-75">
+                      Thank you for contacting support, how may I help you
+                      today?
+                    </p>
+                  </div>
+                  <small class="opacity-50 text-nowrap"
+                    >12/01/2024 13:00PM</small
+                  >
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                aria-current="true"
+              >
+                <img
+                  src="/images/support/depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg"
+                  alt="twbs"
+                  width="32"
+                  height="32"
+                  class="rounded-circle flex-shrink-0"
+                />
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <h6 class="mb-0">You</h6>
+                    <p class="mb-0 opacity-75">Hi doing, nham bay nov?</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap"
+                    >12/01/2024 13:03PM</small
+                  >
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                aria-current="true"
+              >
+                <img
+                  src="/images/support/6425a5b698c539cbabed6a60_Top-Ideas-To-Help-Improve-Your-Customer-Service.jpg"
+                  alt="twbs"
+                  width="32"
+                  height="32"
+                  class="rounded-circle flex-shrink-0"
+                />
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <h6 class="mb-0">Agent</h6>
+                    <p class="mb-0 opacity-75">
+                      I'm not sure I understand what you are saying, could you
+                      describe the problem you are having?
+                    </p>
+                  </div>
+                  <small class="opacity-50 text-nowrap"
+                    >12/01/2024 13:04PM</small
+                  >
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                aria-current="true"
+              >
+                <img
+                  src="/images/support/depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg"
+                  alt="twbs"
+                  width="32"
+                  height="32"
+                  class="rounded-circle flex-shrink-0"
+                />
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <h6 class="mb-0">You</h6>
+                    <p class="mb-0 opacity-75">Ok bek kner tov jg :(</p>
+                  </div>
+                  <small class="opacity-50 text-nowrap">Now</small>
+                </div>
+              </a>
+
+              <div
+                href="#"
+                class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                aria-current="true"
+              >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Type something... "
+                />
+                <button class="btn btn-primary">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

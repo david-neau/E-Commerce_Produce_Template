@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VENDOR - WAREHOUSE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!--Navbar
+//Vendor Dropdown **maybe put this as a profile downdown for other roles
+because it's a bit empty
+> Profile
+> Listing
+> Inbox
+
+//Employee **maybe like a table with filter and search
+> Staff
+> Manager
+> Owner
+
+//Insight 
+> View
+> Sales
+> Statistics
+
+//Support
+> FAQ
+> Discussion
+> Contact Us
+
+
+
+-->
+
+    <!--Navbar-->
+    <header class="p-3 mb-3 border-bottom">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li>
+              <a href="#" class="nav-link px-2 link-body-emphasis active"
+                >Overview</a
+              >
+            </li>
+
+            <li>
+              <a href="#" class="nav-link px-2 link-body-emphasis">Products</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link text-black dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Insight
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">View</a></li>
+                <li><a class="dropdown-item" href="#">Sales</a></li>
+
+                <li><a class="dropdown-item" href="#">Statistics</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-2 link-body-emphasis">Support</a>
+            </li>
+          </ul>
+
+          <div class="dropdown text-end">
+            <a
+              href="#"
+              class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle show"
+              data-bs-toggle="dropdown"
+              aria-expanded="true"
+            >
+              <img
+                src="/images/vendor/aeon.png"
+                alt=""
+                width="32"
+                height="32"
+                class="rounded-circle me-2"
+              />
+              <strong>AEON 3 (Mean Chey)</strong>
+            </a>
+            <ul
+              class="dropdown-menu text-small shadow show"
+              style="
+                position: absolute;
+                inset: auto auto 0px 0px;
+                margin: 0px;
+                transform: translate(0px, -34.4444px);
+              "
+              data-popper-placement="top-start"
+            >
+              <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+              <li><a class="dropdown-item" href="#">Inbox</a></li>
+              <li><a class="dropdown-item" href="#">Staff List</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Overview-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <img
+            src="/images/product/natural_garden_cambodia_lahong.jpg"
+            class="card-img-top product-image rounded-3"
+            alt=""
+          />
+        </div>
+        <div class="col pt-4 pt-md-0">
+          <h2>
+            ផ្លែ​ល្ហុង
+            <button class="btn btn-small btn-outline-secondary">Edit</button>
+          </h2>
+          <a class="text-muted text-decoration-none" href="../pages/vendor.html"
+            >Natural Garden-Cambodia</a
+          >
+          <hr />
+          <div class="row">
+            <div class="row">
+              <div class="col">Product Code: 085512312</div>
+            </div>
+            <div class="row">
+              <div class="col">In-store: 30kg</div>
+            </div>
+            <div class="row h4 mt-4">
+              <div class="col">Price: ៤០០០៛/kg</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <div class="form-floating">
+                <input type="number" class="form-control" width="" min="1" />
+                <label for="floatingTextarea">Quantity</label>
+              </div>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-success btn py-3"
+                data-bs-toggle="modal"
+                data-bs-target="#cartModal"
+              >
+                Update Stock
+              </button>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col">Description: បន្លែ ផ្លែឈើស្រស់ៗទើបមកដល់!</div>
+          </div>
+        </div>
+      </div>
+      Total Views (Monthly)
+      <div class="row">
+        <div class="col-mt-5 text-center mx-auto">
+          <canvas id="myChart"></canvas><br />
+        </div>
+      </div>
+      <div class="row mb-5 mt-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <label for="" class="form-label">Start date</label>
+          <input type="date" class="form-control" name="" id="" />
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <label for="" class="form-label">End date</label>
+          <input type="date" class="form-control" name="" id="" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-mt-5 text-center mx-auto">
+          <canvas id="myChart1"></canvas><br />
+          Total Views (Monthly)
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const ctx = document.getElementById("myChart");
+      const ctx1 = document.getElementById("myChart1");
+      new Chart(ctx1, {
+        type: "bar",
+
+        data: {
+          labels: [
+            "January 2023",
+            "February 2023",
+            "March 2023",
+            "April 2023",
+            "May 2023",
+            "June 2023",
+            "July 2023",
+            "August 2023",
+          ],
+          datasets: [
+            {
+              label: "# of views",
+              data: [245, 578, 899, 1244, 1456, 1789, 1333, 2000],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+
+      new Chart(ctx, {
+        type: "line",
+
+        data: {
+          labels: [
+            "January 2023",
+            "February 2023",
+            "March 2023",
+            "April 2023",
+            "May 2023",
+            "June 2023",
+            "July 2023",
+            "August 2023",
+          ],
+          datasets: [
+            {
+              label: "# of views",
+              data: [245, 578, 899, 1244, 1456, 1789, 1333, 2000],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

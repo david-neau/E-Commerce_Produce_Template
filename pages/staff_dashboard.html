@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VENDOR - WAREHOUSE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!--Navbar
+//Vendor Dropdown **maybe put this as a profile downdown for other roles
+because it's a bit empty
+> Profile
+> Listing
+> Inbox
+
+//Employee **maybe like a table with filter and search
+> Staff
+> Manager
+> Owner
+
+//Insight 
+> View
+> Sales
+> Statistics
+
+//Support
+> FAQ
+> Discussion
+> Contact Us
+-->
+
+    <!--Navbar-->
+    <header class="p-3 mb-3 border-bottom">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li>
+              <a href="#" class="nav-link px-2 link-body-emphasis active"
+                >Overview</a
+              >
+            </li>
+
+            <li>
+              <a href="#" class="nav-link px-2 link-body-emphasis">Products</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-2 link-body-emphasis">Orders</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link text-black dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Insight
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">View</a></li>
+                <li><a class="dropdown-item" href="#">Sales</a></li>
+
+                <li><a class="dropdown-item" href="#">Statistics</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-2 link-body-emphasis">Support</a>
+            </li>
+          </ul>
+
+          <div class="dropdown text-end">
+            <a
+              href="#"
+              class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle show"
+              data-bs-toggle="dropdown"
+              aria-expanded="true"
+            >
+              <img
+                src="/images/vendor/aeon.png"
+                alt=""
+                width="32"
+                height="32"
+                class="rounded-circle me-2"
+              />
+              <strong>AEON 3 (Mean Chey)</strong>
+            </a>
+            <ul
+              class="dropdown-menu text-small shadow show"
+              style="
+                position: absolute;
+                inset: auto auto 0px 0px;
+                margin: 0px;
+                transform: translate(0px, -34.4444px);
+              "
+              data-popper-placement="top-start"
+            >
+              <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+              <li><a class="dropdown-item" href="#">Inbox</a></li>
+              <li><a class="dropdown-item" href="#">Staff</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Overview-->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Overview</h2>
+          Getting started with the vendor dashboard
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-12">
+          <h5 class="fw-bold">
+            Insight <button class="btn btn-small">Show all</button>
+          </h5>
+          <div class="card-group">
+            <div class="card alert border">
+              <div class="card-body">
+                <h1 class="fw-bold">25</h1>
+                <h4 class="card-title fw-bold text-primary">
+                  Listing <i class="bi bi-tag-fill"></i>
+                </h4>
+              </div>
+            </div>
+            <div class="card alert border">
+              <div class="card-body">
+                <h1 class="fw-bold">50</h1>
+                <h4 class="card-title fw-bold text-success">
+                  Order <i class="bi bi-cart-fill"></i>
+                </h4>
+              </div>
+            </div>
+
+            <div class="card alert border">
+              <div class="card-body">
+                <h1 class="fw-bold">3,000</h1>
+                <h4 class="card-title fw-bold text-secondary">
+                  Views <i class="bi bi-eye-fill"></i>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="fw-bold">
+            Top Category <button class="btn btn-small">Show all</button>
+          </h5>
+          <div class="card">
+            <div class="card-body">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-8 pt-4 pt-md-0">
+          <h5 class="fw-bold">
+            Inbox <button class="btn btn-small">Show all</button>
+          </h5>
+          <div class="list-group">
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex gap-3 py-3"
+              aria-current="true"
+            >
+              <img
+                src="/images/samaki_logo.png"
+                alt="twbs"
+                width="32"
+                height="32"
+                class="rounded-circle flex-shrink-0"
+              />
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">Samaki Marketplace</h6>
+                  <p class="mb-0 opacity-75">
+                    Your product listing has been upload!
+                  </p>
+                </div>
+                <small class="opacity-50 text-nowrap">1w</small>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex gap-3 py-3"
+              aria-current="true"
+            >
+              <img
+                src="/images/support/p1.avif"
+                alt="twbs"
+                width="32"
+                height="32"
+                class="rounded-circle flex-shrink-0"
+                style="object-fit: scale-down"
+              />
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">
+                    ផល សុធា
+                    <span class="badge rounded-pill bg-secondary">New</span>
+                  </h6>
+                  <p class="mb-0 opacity-75">
+                    សួរស្តីបង! ខ្ញុំសូមសួរអំពីការ order របស់ខ្ញុំបន្តិច
+                  </p>
+                </div>
+                <small class="opacity-50 text-nowrap">now</small>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex gap-3 py-3"
+              aria-current="true"
+            >
+              <img
+                src="/images/support/p1.jpg"
+                alt="twbs"
+                width="32"
+                height="32"
+                class="rounded-circle flex-shrink-0"
+                style="object-fit: scale-down"
+              />
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">ថន វណ្ណា</h6>
+                  <p class="mb-0 opacity-75">You: អរគុណច្រើន</p>
+                </div>
+                <small class="opacity-50 text-nowrap">3d</small>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex gap-3 py-3"
+              aria-current="true"
+            >
+              <img
+                src="/images/support/p3.jpg"
+                alt="twbs"
+                width="32"
+                height="32"
+                class="rounded-circle flex-shrink-0"
+                style="object-fit: fill"
+              />
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">គ្រុជ ចន្ទី</h6>
+                  <p class="mb-0 opacity-75">អត់អីទេច៎ា!</p>
+                </div>
+                <small class="opacity-50 text-nowrap">1w</small>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12">
+          <h5 class="fw-bold">
+            Orders <button class="btn btn-small">Show all</button>
+          </h5>
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">Detail</th>
+
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="">
+                      <td scope="row">25/01/2024</td>
+                      <td>
+                        ABC-122
+                        <br />
+                        <small class="text-secondary">ABA Pay</small>
+                      </td>
+                      <td class="text-secondary">Pending</td>
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">23/01/2024</td>
+                      <td>
+                        ABC-121
+                        <br />
+                        <small class="text-secondary">ACLEDA</small>
+                      </td>
+                      <td class="text-success">Completed</td>
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">23/01/2024</td>
+                      <td>
+                        ABC-120
+                        <br />
+                        <small class="text-secondary">Credit Card</small>
+                      </td>
+                      <td>Refunded</td>
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">23/01/2024</td>
+                      <td>
+                        ABC-119
+                        <br />
+                        <small class="text-secondary">ABA Pay</small>
+                      </td>
+                      <td class="text-danger">Cancelled</td>
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">23/01/2024</td>
+                      <td>
+                        ABC-118
+                        <br />
+                        <small class="text-secondary">ABA Pay</small>
+                      </td>
+                      <td class="text-success">Completed</td>
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3 mb-5">
+        <div class="col-12">
+          <h5 class="fw-bold">
+            Products <button class="btn btn-small">Show all</button>
+          </h5>
+          <div class="card">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 150px">Last Updated</th>
+                    <th scope="col">Product Title</th>
+                    <th scope="col" style="width: 120px">In-stock</th>
+                    <th scope="col" style="width: 100px">Price</th>
+                    <th scope="col" style="width: 120px"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-muted">12 hours ago</td>
+                    <td>ស្វាយខ្ទីសកែវចិន</td>
+                    <td>100</td>
+
+                    <td>$1.50/kg</td>
+                    <td>
+                      <a
+                        class="btn btn-success btn-sm"
+                        href="../pages/product.html"
+                        >View</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted">12 hours ago</td>
+                    <td>ស្ពៃខាត់ណា</td>
+                    <td>100</td>
+
+                    <td>$2.50/kg</td>
+                    <td>
+                      <a
+                        class="btn btn-success btn-sm"
+                        href="../pages/product.html"
+                        >View</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted">12 hours ago</td>
+                    <td>ផ្លែ​ល្ហុង</td>
+                    <td>100</td>
+
+                    <td>$1/kg</td>
+                    <td>
+                      <a
+                        class="btn btn-success btn-sm"
+                        href="../pages/product.html"
+                        >View</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted">12 hours ago</td>
+                    <td>ផ្លែ​ទៀប</td>
+                    <td>100</td>
+
+                    <td>$2.50/kg</td>
+                    <td>
+                      <a
+                        class="btn btn-success btn-sm"
+                        href="../pages/product.html"
+                        >View</a
+                      >
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-muted">12 hours ago</td>
+                    <td>ក្រូចថ្លុង</td>
+                    <td>100</td>
+
+                    <td>$1.50/kg</td>
+                    <td>
+                      <a
+                        class="btn btn-success btn-sm"
+                        href="../pages/product.html"
+                        >View</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "doughnut",
+
+        data: {
+          labels: [
+            "Fruits",
+            "Vegetable",
+            "Meat",
+            "Seafood",
+            "Aromatics",
+            "Rice",
+            "Noodle",
+            "Bakery",
+          ],
+          datasets: [
+            {
+              label: "# of views",
+              data: [10, 25, 5, 3, 2, 1, 2, 1],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
