@@ -112,7 +112,7 @@ because it's a bit empty
               <strong>AEON 3 (Mean Chey)</strong>
             </a>
             <ul
-              class="dropdown-menu text-small shadow show"
+              class="dropdown-menu text-small shadow"
               style="
                 position: absolute;
                 inset: auto auto 0px 0px;
@@ -121,9 +121,15 @@ because it's a bit empty
               "
               data-popper-placement="top-start"
             >
-              <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+              <li>
+                <a class="dropdown-item" href="vendor_profile.html"
+                  >Edit Profile</a
+                >
+              </li>
               <li><a class="dropdown-item" href="#">Inbox</a></li>
-              <li><a class="dropdown-item" href="#">Staff</a></li>
+              <li>
+                <a class="dropdown-item" href="/pages/staff_list.html">Staff</a>
+              </li>
               <li><hr class="dropdown-divider" /></li>
               <li>
                 <a class="dropdown-item" href="/pages/access_portal.html"
@@ -208,6 +214,22 @@ because it's a bit empty
           Manage your staff and their permissions.
         </div>
       </div>
+      <div class="row mt-2">
+        <div class="col">
+          <label for="">Search</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col">
+          <label for="">Sort</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Date (Latest)</option>
+            <option value="1">Date (Oldest)</option>
+            <option value="2">Name (A-Z)</option>
+            <option value="3">Name (Z-A)</option>
+            <option value="4">Order Status</option>
+          </select>
+        </div>
+      </div>
       <div class="row mt-3 mb-5">
         <div class="col-12">
           <div class="card">
@@ -215,89 +237,103 @@ because it's a bit empty
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col" style="width: 150px">Last Updated</th>
-                    <th scope="col">Product Title</th>
-                    <th scope="col">Category</th>
-                    <th scope="col" style="width: 120px">In-stock</th>
-                    <th scope="col" style="width: 100px">Price</th>
+                    <th scope="col" style="width: 150px">Date Added</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col" style="width: 120px">Role</th>
+                    <th scope="col" style="width: 100px">Action</th>
                     <th scope="col" style="width: 120px"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="text-muted">12 hours ago</td>
-                    <td>ស្វាយខ្ទីសកែវចិន</td>
-                    <td>Fruits</td>
-                    <td>100</td>
+                    <td class="text-muted">11/12/23</td>
+                    <td><a href="/pages/user_profile.html">Hour Sokol</a></td>
+                    <td>hoursokol123@gmail.com</td>
+                    <td>Staff</td>
 
-                    <td>$1.50/kg</td>
                     <td>
-                      <a
-                        class="btn btn-success btn-sm"
-                        href="../pages/product.html"
-                        >View</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-muted">12 hours ago</td>
-                    <td>ស្ពៃខាត់ណា</td>
-                    <td>Vegetables</td>
-                    <td>100</td>
-
-                    <td>$2.50/kg</td>
-                    <td>
-                      <a
-                        class="btn btn-success btn-sm"
-                        href="../pages/product.html"
-                        >View</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-muted">12 hours ago</td>
-                    <td>ផ្លែ​ល្ហុង</td>
-                    <td>Fruits</td>
-                    <td>100</td>
-
-                    <td>$1/kg</td>
-                    <td>
-                      <a
-                        class="btn btn-success btn-sm"
-                        href="../pages/product.html"
-                        >View</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-muted">12 hours ago</td>
-                    <td>ផ្លែ​ទៀប</td>
-                    <td>Fruits</td>
-                    <td>100</td>
-
-                    <td>$2.50/kg</td>
-                    <td>
-                      <a
-                        class="btn btn-success btn-sm"
-                        href="../pages/product.html"
-                        >View</a
-                      >
+                      <div class="d-grid d-md-flex justify-content-md-end">
+                        <a
+                          class="btn btn-primary btn-sm me-2"
+                          href="/pages/vendor_chat.html"
+                          >Contact</a
+                        >
+                        <button
+                          class="btn btn-danger btn-sm me-2"
+                          type="button"
+                        >
+                          Remove
+                        </button>
+                        <button class="btn btn-success btn-sm" type="button">
+                          Change Role
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
                   <tr>
-                    <td class="text-muted">12 hours ago</td>
-                    <td>ក្រូចថ្លុង</td>
-                    <td>Fruits</td>
-                    <td>100</td>
+                    <td class="text-muted">11/12/23</td>
+                    <td><a href="/pages/user_profile.html">Pon Sombath</a></td>
+                    <td>ponsombath@gmail.com</td>
+                    <td>Staff</td>
 
-                    <td>$1.50/kg</td>
                     <td>
-                      <a
-                        class="btn btn-success btn-sm"
-                        href="../pages/product.html"
-                        >View</a
-                      >
+                      <div class="d-grid d-md-flex justify-content-md-end">
+                        <a
+                          class="btn btn-primary btn-sm me-2"
+                          href="/pages/vendor_chat.html"
+                          >Contact</a
+                        >
+                        <button
+                          class="btn btn-danger btn-sm me-2"
+                          type="button"
+                        >
+                          Remove
+                        </button>
+                        <button class="btn btn-success btn-sm" type="button">
+                          Change Role
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-muted">11/12/23</td>
+                    <td><a href="/pages/user_profile.html">Chan Rattana</a></td>
+                    <td>chan.rattana@hotmail.com</td>
+                    <td>Manager</td>
+
+                    <td>
+                      <div class="d-grid d-md-flex justify-content-md-end">
+                        <a
+                          class="btn btn-primary btn-sm me-2"
+                          href="/pages/vendor_chat.html"
+                          >Contact</a
+                        >
+                        <button
+                          class="btn btn-danger btn-sm me-2"
+                          type="button"
+                        >
+                          Remove
+                        </button>
+                        <button class="btn btn-success btn-sm" type="button">
+                          Change Role
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-muted">12/12/23</td>
+                    <td><a href="#">Edwardo Carlito</a></td>
+                    <td>e.carlo@gmail.com</td>
+                    <td>Owner</td>
+
+                    <td>
+                      <div class="d-grid d-md-flex justify-content-md-end">
+                        You
+                      </div>
                     </td>
                   </tr>
                 </tbody>

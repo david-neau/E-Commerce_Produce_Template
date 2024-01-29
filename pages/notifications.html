@@ -142,67 +142,17 @@ because it's a bit empty
       </div>
     </header>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!--Overview-->
     <div class="container">
       <div class="row">
         <div class="col">
-          <h2>Orders</h2>
-          View all orders here.
-        </div>
-        <div class="col">
-          <label for="">Sort</label>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Date (Latest)</option>
-            <option value="1">Date (Oldest)</option>
-            <option value="2">Name (A-Z)</option>
-            <option value="3">Name (Z-A)</option>
-            <option value="4">Order Status</option>
-          </select>
-        </div>
-      </div>
-      <div class="row mt-2">
-        <div class="">
-          <label for="">Search</label>
-          <input type="text" class="form-control" />
+          <h2>Notifications</h2>
+          View all your notifications here.
         </div>
       </div>
       <div class="row mt-3 mb-5">
         <div class="col-12">
-          <div class="card mb-4">
+          <div class="card">
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table">
@@ -210,145 +160,78 @@ because it's a bit empty
                     <tr>
                       <th scope="col">Date</th>
                       <th scope="col">Detail</th>
-                      <th scope="col">Recipient</th>
-                      <th scope="col">Status</th>
+
                       <th scope="col">Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr class="">
-                      <td scope="row">25/01/2024</td>
+                      <td scope="row">29/01/2024 15:30PM</td>
                       <td>
-                        ABC-122
+                        New listing created by <a href="#">នៅ សុខា</a>
                         <br />
-                        <small class="text-secondary">ABA Pay</small>
                       </td>
-                      <td class="text-primary">
-                        <a href="#">Malory Winston</a>
-                      </td>
-                      <td class="text-secondary">Pending</td>
+
                       <td>
                         <a href="/pages/invoice.html" class="text-secondary"
                           >View Detail</a
-                        >
-                        <a
-                          href="/pages/transaction_detail.html"
-                          class="text-primary"
-                          >Contact</a
-                        >
-                        <a
-                          href="/pages/transaction_detail.html"
-                          class="text-danger"
-                          >Cancel Order</a
                         >
                       </td>
                     </tr>
                     <tr class="">
-                      <td scope="row">23/01/2024</td>
+                      <td scope="row">30/01/2024 9:30PM</td>
                       <td>
-                        ABC-121
+                        Invite send to soravuthy@gmail.com by
+                        <a href="#">ម៉ម សុឃីម</a>
                         <br />
-                        <small class="text-secondary">ACLEDA</small>
                       </td>
-                      <td class="text-primary"><a href="#">ជា សិកា</a></td>
-                      <td class="text-success">Completed</td>
+
                       <td>
                         <a href="/pages/invoice.html" class="text-secondary"
                           >View Detail</a
-                        >
-                        <a
-                          href="/pages/transaction_detail.html"
-                          class="text-primary"
-                          >Contact</a
                         >
                       </td>
                     </tr>
                     <tr class="">
-                      <td scope="row">23/01/2024</td>
+                      <td scope="row">30/01/2024 9:30PM</td>
                       <td>
-                        ABC-120
+                        <a href="view_product.html">ផ្លែ​ល្ហុង</a> stock updated
+                        by <a href="#">ម៉ម សុឃីម</a>
                         <br />
-                        <small class="text-secondary">Credit Card</small>
                       </td>
-                      <td class="text-primary"><a href="#">អៀ សុភា</a></td>
-                      <td>Refunded</td>
+
                       <td>
                         <a href="/pages/invoice.html" class="text-secondary"
                           >View Detail</a
-                        >
-                        <a
-                          href="/pages/transaction_detail.html"
-                          class="text-primary"
-                          >Contact</a
-                        >
-                      </td>
-                    </tr>
-                    <tr class="">
-                      <td scope="row">23/01/2024</td>
-                      <td>
-                        ABC-119
-                        <br />
-                        <small class="text-secondary">ABA Pay</small>
-                      </td>
-                      <td class="text-primary"><a href="#">នៅ សុនេត្រា</a></td>
-                      <td class="text-danger">Cancelled</td>
-                      <td>
-                        <a href="/pages/invoice.html" class="text-secondary"
-                          >View Detail</a
-                        >
-                        <a
-                          href="/pages/transaction_detail.html"
-                          class="text-primary"
-                          >Contact</a
-                        >
-                      </td>
-                    </tr>
-                    <tr class="">
-                      <td scope="row">23/01/2024</td>
-                      <td>
-                        ABC-118
-                        <br />
-                        <small class="text-secondary">ABA Pay</small>
-                      </td>
-                      <td class="text-primary"><a href="#">សុខា ភក្តី</a></td>
-                      <td class="text-success">Completed</td>
-                      <td>
-                        <a href="/pages/invoice.html" class="text-secondary"
-                          >View Detail</a
-                        >
-                        <a
-                          href="/pages/transaction_detail.html"
-                          class="text-primary"
-                          >Contact</a
                         >
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <nav aria-label="Page navigation example ">
-                  <ul class="pagination float-end">
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link active" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
               </div>
+              <nav aria-label="Page navigation example ">
+                <ul class="pagination float-end">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link active" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
