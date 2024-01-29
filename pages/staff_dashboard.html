@@ -48,16 +48,26 @@ because it's a bit empty
             class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           >
             <li>
-              <a href="#" class="nav-link px-2 link-body-emphasis active"
+              <a
+                href="/pages/staff_dashboard.html"
+                class="nav-link px-2 link-body-emphasis active"
                 >Overview</a
               >
             </li>
 
             <li>
-              <a href="#" class="nav-link px-2 link-body-emphasis">Products</a>
+              <a
+                href="/pages/product_listing.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Products</a
+              >
             </li>
             <li>
-              <a href="#" class="nav-link px-2 link-body-emphasis">Orders</a>
+              <a
+                href="/pages/order.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Orders</a
+              >
             </li>
             <li class="nav-item dropdown">
               <a
@@ -77,14 +87,18 @@ because it's a bit empty
               </ul>
             </li>
             <li>
-              <a href="#" class="nav-link px-2 link-body-emphasis">Support</a>
+              <a
+                href="/pages/support_main.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Support</a
+              >
             </li>
           </ul>
 
           <div class="dropdown text-end">
             <a
               href="#"
-              class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle show"
+              class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
               data-bs-toggle="dropdown"
               aria-expanded="true"
             >
@@ -111,7 +125,11 @@ because it's a bit empty
               <li><a class="dropdown-item" href="#">Inbox</a></li>
               <li><a class="dropdown-item" href="#">Staff</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Sign out</a></li>
+              <li>
+                <a class="dropdown-item" href="/pages/access_portal.html"
+                  >Sign out</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -124,6 +142,81 @@ because it's a bit empty
         <div class="col">
           <h2>Overview</h2>
           Getting started with the vendor dashboard
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <h5 class="fw-bold">
+            Notifications
+            <span class="badge rounded-pill bg-primary">1 New</span
+            ><button class="btn btn-small">Show all</button>
+          </h5>
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">Detail</th>
+
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="">
+                      <td scope="row">29/01/2024 15:30PM</td>
+                      <td>
+                        New listing created by <a href="#">នៅ សុខា</a>
+                        <br />
+                      </td>
+
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">30/01/2024 9:30PM</td>
+                      <td>
+                        Invite send to soravuthy@gmail.com by
+                        <a href="#">ម៉ម សុឃីម</a>
+                        <br />
+                      </td>
+
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">30/01/2024 9:30PM</td>
+                      <td>
+                        <a href="view_product.html">ផ្លែ​ល្ហុង</a> stock updated
+                        by <a href="#">ម៉ម សុឃីម</a>
+                        <br />
+                      </td>
+
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -174,7 +267,8 @@ because it's a bit empty
         </div>
         <div class="col-12 col-md-6 col-lg-8 pt-4 pt-md-0">
           <h5 class="fw-bold">
-            Inbox <button class="btn btn-small">Show all</button>
+            Inbox <span class="badge rounded-pill bg-secondary">1 New</span
+            ><button class="btn btn-small">Show all</button>
           </h5>
           <div class="list-group">
             <a
@@ -193,7 +287,7 @@ because it's a bit empty
                 <div>
                   <h6 class="mb-0">Samaki Marketplace</h6>
                   <p class="mb-0 opacity-75">
-                    Your product listing has been upload!
+                    Your product listing has been uploaded!
                   </p>
                 </div>
                 <small class="opacity-50 text-nowrap">1w</small>
@@ -283,7 +377,7 @@ because it's a bit empty
                     <tr>
                       <th scope="col">Date</th>
                       <th scope="col">Detail</th>
-
+                      <th scope="col">Recipient</th>
                       <th scope="col">Status</th>
                       <th scope="col">Action</th>
                     </tr>
@@ -296,12 +390,25 @@ because it's a bit empty
                         <br />
                         <small class="text-secondary">ABA Pay</small>
                       </td>
+                      <td class="text-primary">
+                        <a href="#">Malory Winston</a>
+                      </td>
                       <td class="text-secondary">Pending</td>
                       <td>
                         <a
                           href="/pages/transaction_detail.html"
                           class="text-secondary"
                           >View Detail</a
+                        >
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-primary"
+                          >Contact</a
+                        >
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-danger"
+                          >Cancel Order</a
                         >
                       </td>
                     </tr>
@@ -312,12 +419,18 @@ because it's a bit empty
                         <br />
                         <small class="text-secondary">ACLEDA</small>
                       </td>
+                      <td class="text-primary"><a href="#">ជា សិកា</a></td>
                       <td class="text-success">Completed</td>
                       <td>
                         <a
                           href="/pages/transaction_detail.html"
                           class="text-secondary"
                           >View Detail</a
+                        >
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-primary"
+                          >Contact</a
                         >
                       </td>
                     </tr>
@@ -328,12 +441,18 @@ because it's a bit empty
                         <br />
                         <small class="text-secondary">Credit Card</small>
                       </td>
+                      <td class="text-primary"><a href="#">អៀ សុភា</a></td>
                       <td>Refunded</td>
                       <td>
                         <a
                           href="/pages/transaction_detail.html"
                           class="text-secondary"
                           >View Detail</a
+                        >
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-primary"
+                          >Contact</a
                         >
                       </td>
                     </tr>
@@ -344,12 +463,18 @@ because it's a bit empty
                         <br />
                         <small class="text-secondary">ABA Pay</small>
                       </td>
+                      <td class="text-primary"><a href="#">នៅ សុនេត្រា</a></td>
                       <td class="text-danger">Cancelled</td>
                       <td>
                         <a
                           href="/pages/transaction_detail.html"
                           class="text-secondary"
                           >View Detail</a
+                        >
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-primary"
+                          >Contact</a
                         >
                       </td>
                     </tr>
@@ -360,6 +485,7 @@ because it's a bit empty
                         <br />
                         <small class="text-secondary">ABA Pay</small>
                       </td>
+                      <td class="text-primary"><a href="#">សុខា ភក្តី</a></td>
                       <td class="text-success">Completed</td>
                       <td>
                         <a
@@ -367,10 +493,38 @@ because it's a bit empty
                           class="text-secondary"
                           >View Detail</a
                         >
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-primary"
+                          >Contact</a
+                        >
                       </td>
                     </tr>
                   </tbody>
                 </table>
+                <nav aria-label="Page navigation example ">
+                  <ul class="pagination float-end">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link active" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </div>

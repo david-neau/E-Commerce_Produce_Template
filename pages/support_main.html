@@ -49,15 +49,27 @@ because it's a bit empty
             class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           >
             <li>
-              <a href="#" class="nav-link px-2 link-body-emphasis active"
+              <a
+                href="/pages/staff_dashboard.html"
+                class="nav-link px-2 link-body-emphasis active"
                 >Overview</a
               >
             </li>
 
             <li>
-              <a href="#" class="nav-link px-2 link-body-emphasis">Products</a>
+              <a
+                href="/pages/product_listing.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Products</a
+              >
             </li>
-
+            <li>
+              <a
+                href="/pages/order.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Orders</a
+              >
+            </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link text-black dropdown-toggle"
@@ -76,14 +88,18 @@ because it's a bit empty
               </ul>
             </li>
             <li>
-              <a href="#" class="nav-link px-2 link-body-emphasis">Support</a>
+              <a
+                href="/pages/support_main.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Support</a
+              >
             </li>
           </ul>
 
           <div class="dropdown text-end">
             <a
               href="#"
-              class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle show"
+              class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
               data-bs-toggle="dropdown"
               aria-expanded="true"
             >
@@ -108,9 +124,13 @@ because it's a bit empty
             >
               <li><a class="dropdown-item" href="#">Edit Profile</a></li>
               <li><a class="dropdown-item" href="#">Inbox</a></li>
-              <li><a class="dropdown-item" href="#">Staff List</a></li>
+              <li><a class="dropdown-item" href="#">Staff</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Sign out</a></li>
+              <li>
+                <a class="dropdown-item" href="/pages/access_portal.html"
+                  >Sign out</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -125,7 +145,7 @@ because it's a bit empty
           Find answers to your questions and contact our team here.
         </div>
       </div>
-      <div class="row row-cols-sm-3 g-3 mt-1">
+      <div class="row row-cols-12 rows-cols-md-4 g-3 mt-1">
         <div class="col">
           <a href="/pages/support_chat.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm card-hover d-flex flex-column">
@@ -196,6 +216,67 @@ because it's a bit empty
               </div>
             </div></a
           >
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col">
+          <h2>Search</h2>
+          Narrow down your search to find the answers you need.
+          <input
+            type="text"
+            class="form-control-lg form-control mt-2"
+            placeholder="Search for your answers here"
+          />
+        </div>
+      </div>
+
+      <div class="row mb-2 mt-3">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary-emphasis"
+                >Staff</strong
+              >
+              <h3 class="mb-0">Manage your staff</h3>
+              <div class="mb-1 text-body-secondary">Nov 12</div>
+              <p class="card-text mb-auto">
+                Learn how to manage your staff and their permissions.
+              </p>
+              <a
+                href="#"
+                class="icon-link gap-1 icon-link-hover stretched-link"
+              >
+                Continue reading
+                <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success-emphasis"
+                >Listing</strong
+              >
+              <h3 class="mb-0">Getting Started</h3>
+              <div class="mb-1 text-body-secondary">Nov 11</div>
+              <p class="mb-auto">
+                Learn how to post listings onto your profile.
+              </p>
+              <a
+                href="#"
+                class="icon-link gap-1 icon-link-hover stretched-link"
+              >
+                Continue reading
+                <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

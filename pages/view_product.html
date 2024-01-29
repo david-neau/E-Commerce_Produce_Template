@@ -50,15 +50,27 @@ because it's a bit empty
             class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           >
             <li>
-              <a href="#" class="nav-link px-2 link-body-emphasis active"
+              <a
+                href="/pages/staff_dashboard.html"
+                class="nav-link px-2 link-body-emphasis active"
                 >Overview</a
               >
             </li>
 
             <li>
-              <a href="#" class="nav-link px-2 link-body-emphasis">Products</a>
+              <a
+                href="/pages/product_listing.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Products</a
+              >
             </li>
-
+            <li>
+              <a
+                href="/pages/order.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Orders</a
+              >
+            </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link text-black dropdown-toggle"
@@ -77,14 +89,18 @@ because it's a bit empty
               </ul>
             </li>
             <li>
-              <a href="#" class="nav-link px-2 link-body-emphasis">Support</a>
+              <a
+                href="/pages/support_main.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Support</a
+              >
             </li>
           </ul>
 
           <div class="dropdown text-end">
             <a
               href="#"
-              class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle show"
+              class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
               data-bs-toggle="dropdown"
               aria-expanded="true"
             >
@@ -109,21 +125,114 @@ because it's a bit empty
             >
               <li><a class="dropdown-item" href="#">Edit Profile</a></li>
               <li><a class="dropdown-item" href="#">Inbox</a></li>
-              <li><a class="dropdown-item" href="#">Staff List</a></li>
+              <li><a class="dropdown-item" href="#">Staff</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Sign out</a></li>
+              <li>
+                <a class="dropdown-item" href="/pages/access_portal.html"
+                  >Sign out</a
+                >
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </header>
 
+    <div
+      class="modal fade"
+      id="newModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Edit Product
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <label for="">Product Name</label>
+            <input type="text" class="form-control mt-1" />
+            <label for="" class="mt-3">Category</label>
+            <select
+              class="form-select mt-1"
+              aria-label="Default select example"
+            >
+              <option selected>Select Category</option>
+              <option value="1">Fruits</option>
+              <option value="2">Vegetable</option>
+              <option value="3">Meat</option>
+              <option value="4">Seafood</option>
+              <option value="5">Aromatic</option>
+              <option value="6">Rice</option>
+              <option value="7">Noodle</option>
+              <option value="8">Bakery</option>
+            </select>
+            <label for="" class="mt-3">Description</label>
+            <textarea
+              name=""
+              class="form-control mt-1"
+              id=""
+              cols="30"
+              rows="5"
+            ></textarea>
+            <label for="" class="mt-3">In-stock</label>
+            <input type="number" name="" class="form-control mt-1" id="" />
+
+            <div class="row">
+              <div class="col">
+                <label for="" class="mt-3">Price Unit</label>
+                <input type="number" name="" class="form-control mt-1" id="" />
+              </div>
+              <div class="col">
+                <label for="" class="mt-3">Per unit</label>
+                <select
+                  class="form-select mt-1"
+                  aria-label="Default select example"
+                >
+                  <option selected>Select Category</option>
+                  <option value="1">T</option>
+                  <option value="2">Kg</option>
+                  <option value="3">G</option>
+                  <option value="4">Mg</option>
+                  <option value="5">L</option>
+                  <option value="6">Ml</option>
+                  <option value="8">per unit</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="" class="mt-3">Image</label>
+            <input class="form-control mt-1" type="file" id="formFile" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!--Overview-->
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-3">
           <img
-            src="/images/product/natural_garden_cambodia_lahong.jpg"
+            src="/images/product/papaya.jpg"
             class="card-img-top product-image rounded-3"
             alt=""
           />
@@ -131,10 +240,16 @@ because it's a bit empty
         <div class="col pt-4 pt-md-0">
           <h2>
             ផ្លែ​ល្ហុង
-            <button class="btn btn-small btn-outline-secondary">Edit</button>
+            <button
+              class="btn btn-small btn-outline-secondary"
+              data-bs-toggle="modal"
+              data-bs-target="#newModal"
+            >
+              Edit
+            </button>
           </h2>
           <a class="text-muted text-decoration-none" href="../pages/vendor.html"
-            >Natural Garden-Cambodia</a
+            >AEON 3 (Mean Chey)</a
           >
           <hr />
           <div class="row">
@@ -145,14 +260,14 @@ because it's a bit empty
               <div class="col">In-store: 30kg</div>
             </div>
             <div class="row h4 mt-4">
-              <div class="col">Price: ៤០០០៛/kg</div>
+              <div class="col">Price: $0.29/100g</div>
             </div>
           </div>
 
           <div class="row">
             <div class="col-6 col-md-3">
               <div class="form-floating">
-                <input type="number" class="form-control" width="" min="1" />
+                <input type="number" class="form-control" width="" />
                 <label for="floatingTextarea">Quantity</label>
               </div>
             </div>
@@ -172,27 +287,314 @@ because it's a bit empty
           </div>
         </div>
       </div>
-      Total Views (Monthly)
-      <div class="row">
-        <div class="col-mt-5 text-center mx-auto">
-          <canvas id="myChart"></canvas><br />
+
+      <div class="row mt-5">
+        <div class="col">
+          <div class="bd-example m-0 border-0">
+            <nav>
+              <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                <button
+                  class="nav-link active"
+                  id="nav-home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-home"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  Overall
+                </button>
+                <button
+                  class="nav-link"
+                  id="nav-profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-profile"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  Sales
+                </button>
+                <button
+                  class="nav-link"
+                  id="nav-contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-contact"
+                  aria-selected="true"
+                >
+                  Stocks
+                </button>
+                <button
+                  class="nav-link"
+                  id="nav-history-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-history"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-history"
+                  aria-selected="true"
+                >
+                  History
+                </button>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div
+                class="tab-pane fade"
+                id="nav-home"
+                role="tabpanel"
+                aria-labelledby="nav-home-tab"
+              >
+                <div class="row mb-3 mt-4">
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <label for="" class="form-label">Start date</label>
+                    <input type="date" class="form-control" name="" id="" />
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <label for="" class="form-label">End date</label>
+                    <input type="date" class="form-control" name="" id="" />
+                  </div>
+                </div>
+                <canvas id="myChart"></canvas><br />
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-profile"
+                role="tabpanel"
+                aria-labelledby="nav-profile-tab"
+              >
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Date</th>
+
+                        <th scope="col">Recipient</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Price</th>
+
+                        <th scope="col">Total</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="">
+                        <td scope="row">25/01/2024</td>
+                        <td class="text-primary">
+                          <a href="#">Malory Winston</a>
+                        </td>
+                        <td>10kg</td>
+                        <td>1$/kg</td>
+                        <td>1$/kg</td>
+
+                        <td class="text-secondary">Pending</td>
+                        <td>
+                          <a
+                            href="/pages/transaction_detail.html"
+                            class="text-secondary"
+                            >View Detail</a
+                          >
+                          <a
+                            href="/pages/transaction_detail.html"
+                            class="text-primary"
+                            >Contact</a
+                          >
+                          <a
+                            href="/pages/transaction_detail.html"
+                            class="text-danger"
+                            >Cancel Order</a
+                          >
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td scope="row">25/01/2024</td>
+                        <td class="text-primary">
+                          <a href="#">Malory Winston</a>
+                        </td>
+                        <td>10kg</td>
+                        <td>1$/kg</td>
+                        <td>1$/kg</td>
+
+                        <td class="text-secondary">Pending</td>
+                        <td>
+                          <a
+                            href="/pages/transaction_detail.html"
+                            class="text-secondary"
+                            >View Detail</a
+                          >
+                          <a
+                            href="/pages/transaction_detail.html"
+                            class="text-primary"
+                            >Contact</a
+                          >
+                          <a
+                            href="/pages/transaction_detail.html"
+                            class="text-danger"
+                            >Cancel Order</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <nav aria-label="Page navigation example ">
+                    <ul class="pagination float-end">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link active" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="nav-contact"
+                role="tabpanel"
+                aria-labelledby="nav-contact-tab"
+              >
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">Amount</th>
+                      <th scope="col">Transaction Type</th>
+                      <th scope="col">Total Stock</th>
+                      <th scope="col">User</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="">
+                      <td scope="row">29/01/2024 15:30PM</td>
+
+                      <td class="text-success">+1kg</td>
+                      <td>Restock</td>
+                      <td>30kg</td>
+                      <td><a href="#">នៅ សុខា</a></td>
+
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">29/01/2024 15:30PM</td>
+
+                      <td class="text-danger">-1kg</td>
+                      <td>Sale</td>
+                      <td>29kg</td>
+                      <td><a href="#">Malory Winston</a></td>
+
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-history"
+                role="tabpanel"
+                aria-labelledby="nav-home-tab"
+              >
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">Detail</th>
+
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="">
+                      <td scope="row">29/01/2024 15:30PM</td>
+                      <td>
+                        Updated stock from 29kg to 30kg <a href="#">នៅ សុខា</a>
+                        <br />
+                      </td>
+
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">29/01/2024 15:30PM</td>
+                      <td>
+                        Price changed to $0.29/100g by <a href="#">នៅ សុខា</a>
+                        <br />
+                      </td>
+
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">29/01/2024 15:30PM</td>
+                      <td>
+                        Changed name from "ផ្លែ​រល្ហុង" to "ផ្លែ​ល្ហុង" by
+                        <a href="#">នៅ សុខា</a>
+                        <br />
+                      </td>
+
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row mb-5 mt-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <label for="" class="form-label">Start date</label>
-          <input type="date" class="form-control" name="" id="" />
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <label for="" class="form-label">End date</label>
-          <input type="date" class="form-control" name="" id="" />
-        </div>
-      </div>
+
       <div class="row">
-        <div class="col-mt-5 text-center mx-auto">
-          <canvas id="myChart1"></canvas><br />
-          Total Views (Monthly)
-        </div>
+        <div class="col-mt-5 text-center mx-auto"></div>
       </div>
     </div>
 
@@ -204,37 +606,6 @@ because it's a bit empty
     ></script>
     <script>
       const ctx = document.getElementById("myChart");
-      const ctx1 = document.getElementById("myChart1");
-      new Chart(ctx1, {
-        type: "bar",
-
-        data: {
-          labels: [
-            "January 2023",
-            "February 2023",
-            "March 2023",
-            "April 2023",
-            "May 2023",
-            "June 2023",
-            "July 2023",
-            "August 2023",
-          ],
-          datasets: [
-            {
-              label: "# of views",
-              data: [245, 578, 899, 1244, 1456, 1789, 1333, 2000],
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
-      });
 
       new Chart(ctx, {
         type: "line",
@@ -254,6 +625,39 @@ because it's a bit empty
             {
               label: "# of views",
               data: [245, 578, 899, 1244, 1456, 1789, 1333, 2000],
+              borderWidth: 1,
+            },
+            {
+              label: "# of sales",
+              data: [987, 543, 123, 789, 456, 321, 654, 987],
+              borderWidth: 1,
+            },
+            {
+              label: "# of stocks",
+              data: [
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+              ],
+              borderWidth: 1,
+            },
+            {
+              label: "# of price",
+              data: [
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+                Math.floor(Math.random() * 1000),
+              ],
               borderWidth: 1,
             },
           ],

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VENDOR - WAREHOUSE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!--Navbar
+//Vendor Dropdown **maybe put this as a profile downdown for other roles
+because it's a bit empty
+> Profile
+> Listing
+> Inbox
+
+//Employee **maybe like a table with filter and search
+> Staff
+> Manager
+> Owner
+
+//Insight 
+> View
+> Sales
+> Statistics
+
+//Support
+> FAQ
+> Discussion
+> Contact Us
+-->
+
+    <!--Navbar-->
+    <header class="p-3 mb-3 border-bottom">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li>
+              <a
+                href="/pages/staff_dashboard.html"
+                class="nav-link px-2 link-body-emphasis active"
+                >Overview</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/pages/product_listing.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="/pages/order.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Orders</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link text-black dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Insight
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">View</a></li>
+                <li><a class="dropdown-item" href="#">Sales</a></li>
+
+                <li><a class="dropdown-item" href="#">Statistics</a></li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="/pages/support_main.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Support</a
+              >
+            </li>
+          </ul>
+
+          <div class="dropdown text-end">
+            <a
+              href="#"
+              class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="true"
+            >
+              <img
+                src="/images/vendor/aeon.png"
+                alt=""
+                width="32"
+                height="32"
+                class="rounded-circle me-2"
+              />
+              <strong>AEON 3 (Mean Chey)</strong>
+            </a>
+            <ul
+              class="dropdown-menu text-small shadow show"
+              style="
+                position: absolute;
+                inset: auto auto 0px 0px;
+                margin: 0px;
+                transform: translate(0px, -34.4444px);
+              "
+              data-popper-placement="top-start"
+            >
+              <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+              <li><a class="dropdown-item" href="#">Inbox</a></li>
+              <li><a class="dropdown-item" href="#">Staff</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="/pages/access_portal.html"
+                  >Sign out</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Overview-->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Orders</h2>
+          View all orders here.
+        </div>
+        <div class="col">
+          <label for="">Sort</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Date (Latest)</option>
+            <option value="1">Date (Oldest)</option>
+            <option value="2">Name (A-Z)</option>
+            <option value="3">Name (Z-A)</option>
+            <option value="4">Order Status</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="">
+          <label for="">Search</label>
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="row mt-3 mb-5">
+        <div class="col-12">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">Detail</th>
+                      <th scope="col">Recipient</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="">
+                      <td scope="row">25/01/2024</td>
+                      <td>
+                        ABC-122
+                        <br />
+                        <small class="text-secondary">ABA Pay</small>
+                      </td>
+                      <td class="text-primary">
+                        <a href="#">Malory Winston</a>
+                      </td>
+                      <td class="text-secondary">Pending</td>
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-primary"
+                          >Contact</a
+                        >
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-danger"
+                          >Cancel Order</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">23/01/2024</td>
+                      <td>
+                        ABC-121
+                        <br />
+                        <small class="text-secondary">ACLEDA</small>
+                      </td>
+                      <td class="text-primary"><a href="#">ជា សិកា</a></td>
+                      <td class="text-success">Completed</td>
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-primary"
+                          >Contact</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">23/01/2024</td>
+                      <td>
+                        ABC-120
+                        <br />
+                        <small class="text-secondary">Credit Card</small>
+                      </td>
+                      <td class="text-primary"><a href="#">អៀ សុភា</a></td>
+                      <td>Refunded</td>
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-primary"
+                          >Contact</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">23/01/2024</td>
+                      <td>
+                        ABC-119
+                        <br />
+                        <small class="text-secondary">ABA Pay</small>
+                      </td>
+                      <td class="text-primary"><a href="#">នៅ សុនេត្រា</a></td>
+                      <td class="text-danger">Cancelled</td>
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-primary"
+                          >Contact</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">23/01/2024</td>
+                      <td>
+                        ABC-118
+                        <br />
+                        <small class="text-secondary">ABA Pay</small>
+                      </td>
+                      <td class="text-primary"><a href="#">សុខា ភក្តី</a></td>
+                      <td class="text-success">Completed</td>
+                      <td>
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-secondary"
+                          >View Detail</a
+                        >
+                        <a
+                          href="/pages/transaction_detail.html"
+                          class="text-primary"
+                          >Contact</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <nav aria-label="Page navigation example ">
+                  <ul class="pagination float-end">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link active" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
