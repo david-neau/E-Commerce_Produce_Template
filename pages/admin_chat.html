@@ -49,39 +49,52 @@ because it's a bit empty
           >
             <li>
               <a
-                href="/pages/staff_dashboard.html"
-                class="nav-link px-2 link-body-emphasis active"
-                >Overview</a
+                href="/pages/product_listing.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Inbox <span class="badge bg-secondary">2</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/pages/report_list.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Reports <span class="badge bg-danger">1</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/pages/insight.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Analytics</a
               >
             </li>
 
             <li>
               <a
-                href="/pages/product_listing.html"
-                class="nav-link px-2 link-body-emphasis"
-                >Products</a
-              >
-            </li>
-            <li>
-              <a
-                href="/pages/order.html"
-                class="nav-link px-2 link-body-emphasis"
-                >Orders</a
-              >
-            </li>
-            <li>
-              <a
-                href="/pages/insight.html"
-                class="nav-link px-2 link-body-emphasis"
-                >Insight</a
-              >
-            </li>
-            <li>
-              <a
                 href="/pages/support_main.html"
                 class="nav-link px-2 link-body-emphasis"
-                >Support</a
+                >Content</a
               >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link text-dark dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Vendor
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Product</a></li>
+                <li><a class="dropdown-item" href="#">Order</a></li>
+                <li><a class="dropdown-item" href="#">Insight</a></li>
+                <li><a class="dropdown-item" href="#">Staff</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">View All</a></li>
+              </ul>
             </li>
           </ul>
 
@@ -93,13 +106,13 @@ because it's a bit empty
               aria-expanded="true"
             >
               <img
-                src="/images/vendor/aeon.png"
+                src="/images/samaki_logo.png"
                 alt=""
                 width="32"
                 height="32"
                 class="rounded-circle me-2"
               />
-              <strong>AEON 3 (Mean Chey)</strong>
+              <strong>Samaki Marketplace</strong>
             </a>
             <ul
               class="dropdown-menu text-small shadow"
@@ -111,11 +124,6 @@ because it's a bit empty
               "
               data-popper-placement="top-start"
             >
-              <li>
-                <a class="dropdown-item" href="vendor_profile.html"
-                  >Edit Profile</a
-                >
-              </li>
               <li><a class="dropdown-item" href="#">Inbox</a></li>
               <li>
                 <a class="dropdown-item" href="/pages/staff_list.html">Staff</a>
@@ -136,8 +144,8 @@ because it's a bit empty
     <div class="container">
       <div class="row">
         <div class="col">
-          <h2>Notifications</h2>
-          View all your notifications here.
+          <h2>Inbox</h2>
+          View all your messages here
         </div>
       </div>
       <div class="row mt-3 mb-5">
@@ -150,52 +158,94 @@ because it's a bit empty
                     <tr>
                       <th scope="col">Date</th>
                       <th scope="col">Detail</th>
+                      <th scope="col">Role</th>
+                      <th scope="col">Status</th>
 
                       <th scope="col">Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr class="">
-                      S
                       <td scope="row">29/01/2024 15:30PM</td>
                       <td>
-                        New listing created by <a href="#">នៅ សុខា</a>
+                        Refuse Refund - <a href="#">នៅ សុខា</a>
                         <br />
                       </td>
-
-                      <td>
-                        <a href="/pages/invoice.html" class="text-secondary"
-                          >View Detail</a
-                        >
-                      </td>
-                    </tr>
-                    <tr class="">
-                      <td scope="row">30/01/2024 9:30PM</td>
-                      <td>
-                        Invite send to soravuthy@gmail.com by
-                        <a href="#">ម៉ម សុឃីម</a>
-                        <br />
-                      </td>
-
-                      <td>
-                        <a href="/pages/staff_list.html" class="text-secondary"
-                          >View Detail</a
-                        >
-                      </td>
-                    </tr>
-                    <tr class="">
-                      <td scope="row">30/01/2024 9:30PM</td>
-                      <td>
-                        <a href="view_product.html">ផ្លែ​ល្ហុង</a> stock updated
-                        by <a href="#">ម៉ម សុឃីម</a>
-                        <br />
-                      </td>
+                      <td>User</td>
+                      <td class="text-success">On-going</td>
 
                       <td>
                         <a
-                          href="/pages/view_product.html"
-                          class="text-secondary"
-                          >View Detail</a
+                          name=""
+                          id=""
+                          class="btn btn-outline-secondary btn-sm"
+                          href="#"
+                          role="button"
+                          >Close</a
+                        >
+                        <a
+                          name=""
+                          id=""
+                          class="btn btn-primary btn-sm"
+                          href="#"
+                          role="button"
+                          >Chat</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">29/01/2024 15:30PM</td>
+                      <td>
+                        Please add new category - <a href="#">ចន សុីណា</a>
+                        <br />
+                      </td>
+                      <td>Manager</td>
+
+                      <td class="text-success">On-going</td>
+
+                      <td>
+                        <a
+                          name=""
+                          id=""
+                          class="btn btn-outline-secondary btn-sm"
+                          href="#"
+                          role="button"
+                          >Close</a
+                        >
+                        <a
+                          name=""
+                          id=""
+                          class="btn btn-primary btn-sm"
+                          href="#"
+                          role="button"
+                          >Chat</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">29/01/2024 15:30PM</td>
+                      <td>
+                        Vendor Name Change - <a href="#">លុច សិតា</a>
+                        <br />
+                      </td>
+                      <td>Owner</td>
+                      <td class="text-success">On-going</td>
+                      <td>
+                        <a
+                          name=""
+                          id=""
+                          class="btn btn-outline-secondary btn-sm"
+                          href="#"
+                          role="button"
+                          >Close</a
+                        >
+                        <a
+                          name=""
+                          id=""
+                          class="btn btn-primary btn-sm"
+                          href="#"
+                          role="button"
+                          >Chat</a
                         >
                       </td>
                     </tr>

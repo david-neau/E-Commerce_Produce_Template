@@ -71,22 +71,12 @@ because it's a bit empty
                 >Orders</a
               >
             </li>
-            <li class="nav-item dropdown">
+            <li>
               <a
-                class="nav-link text-black dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                href="/pages/insight.html"
+                class="nav-link px-2 link-body-emphasis"
+                >Insight</a
               >
-                Insight
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">View</a></li>
-                <li><a class="dropdown-item" href="#">Sales</a></li>
-
-                <li><a class="dropdown-item" href="#">Statistics</a></li>
-              </ul>
             </li>
             <li>
               <a
@@ -273,7 +263,7 @@ because it's a bit empty
           <div class="row">
             <div class="col-6 col-md-3">
               <div class="form-floating">
-                <input type="number" class="form-control" width="" />
+                <input type="number" class="form-control" width="" min="0" />
                 <label for="floatingTextarea">Quantity</label>
               </div>
             </div>
@@ -283,7 +273,7 @@ because it's a bit empty
                 data-bs-toggle="modal"
                 data-bs-target="#cartModal"
               >
-                Update Stock
+                Quick Update
               </button>
             </div>
           </div>
@@ -348,6 +338,18 @@ because it's a bit empty
                   aria-selected="true"
                 >
                   History
+                </button>
+                <button
+                  class="nav-link"
+                  id="nav-promo-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-promo"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-promo"
+                  aria-selected="true"
+                >
+                  Promotion
                 </button>
               </div>
             </nav>
@@ -579,6 +581,58 @@ because it's a bit empty
                         <a href="/pages/invoice.html" class="text-secondary"
                           >View Detail</a
                         >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-promo"
+                role="tabpanel"
+                aria-labelledby="nav-home-tab"
+              >
+                <button type="button" class="btn btn-primary">
+                  New Promotion
+                </button>
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Start Date</th>
+                      <th scope="col">End Date</th>
+                      <th scope="col">Duration</th>
+                      <th scope="col">Limit</th>
+                      <th scope="col">Promotion Type</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="">
+                      <td scope="row">29/01/2024 15:30PM</td>
+                      <td scope="row">29/02/2024 15:30PM</td>
+                      <td>31 days</td>
+                      <td>No Limit</td>
+                      <td>Discount</td>
+                      <td>On-going</td>
+                      <td>
+                        <button type="button" class="btn btn-danger">
+                          End
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td scope="row">29/01/2024 15:30PM</td>
+                      <td scope="row">29/02/2024 15:30PM</td>
+                      <td>31 days</td>
+                      <td>First 30 Cust.</td>
+                      <td>BOGO</td>
+                      <td>Ended</td>
+                      <td>
+                        <button type="button" class="btn btn-outline-primary">
+                          Again
+                        </button>
                       </td>
                     </tr>
                   </tbody>
